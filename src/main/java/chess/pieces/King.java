@@ -5,8 +5,6 @@ import boardgame.Position;
 import chess.ChessPiece;
 import chess.Color;
 
-import javax.management.loading.ClassLoaderRepository;
-
 public class King extends ChessPiece {
 
     public King(Board board, Color color) {
@@ -19,7 +17,7 @@ public class King extends ChessPiece {
     }
 
     private boolean canMove(Position position) {
-        ChessPiece p = (ChessPiece)getBoard().piece(position);
+        ChessPiece p = (ChessPiece) getBoard().piece(position);
         return p == null || p.getColor() != getColor();
     }
 
